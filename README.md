@@ -181,6 +181,14 @@ Algunos parámetros fáciles de tunear en `game.js`:
 
 ---
 
+## Triaje automático de issues
+
+El workflow `.github/workflows/claude-issue-triage.yml` analiza con Claude cada issue nuevo (y cada vez que se edita su título o cuerpo). Claude asigna labels de tipo (`bug`, `enhancement`…), área (`area: gameplay`, `area: ui`, `area: controls`, `area: scoring`) y prioridad (`priority: high|medium|low`), y publica un único comentario con un diagnóstico (resumen, causa probable, archivos implicados y enfoque de solución) que luego sirve de base para implementar el arreglo.
+
+Requiere el secret `CLAUDE_CODE_OAUTH_TOKEN` del repositorio (el mismo que usan los demás workflows de Claude).
+
+---
+
 ## Licencia
 
 Proyecto de uso libre con fines educativos y de práctica.
